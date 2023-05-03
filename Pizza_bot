@@ -1,5 +1,5 @@
-#pizza_bot
-#piza_bot_project
+# pizza bot program
 Inport random names 
 
-Names=["John", "Michel", "Ana", "Hizhenberg", "Luke", "Jonathan", "Michel", "Alex", "Iris", "Mia"]
+# list of random names
+Names = ["John", "Michel", "Ana", "Hizhenberg", "Luke", "Jonathan", "Michel", "Alex", "Iris", "Mia"]
