@@ -1,5 +1,7 @@
 
+
 names = [ "John", "Michel", "Ana", "Hizhenberg", "Luke", "Jonathan", "Michel", "Alex", "Iris", "Mia" ]
+
 
 num = randint(0,9) 
 
@@ -13,6 +15,7 @@ def welcome():
     print("*** welcome to pizza ***")
     print(" my name is",name, "***")
     print("***I will be here to help your order***")
+
 
 
 

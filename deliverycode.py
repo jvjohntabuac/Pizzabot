@@ -1,8 +1,9 @@
 while True:
     try:
         delivery = int(input("please enter a valid option"))
-        if delivery >= 1 and delivery <= 2:
-         if delivery == 1:
+        pickup = int(input("please enter a valid option"))
+        if pickup >= 1 and delivery <= 2:
+         if pickup == 1:
             print("Pickup")
             break
         elif delivery == 2:

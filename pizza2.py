@@ -29,38 +29,49 @@ def main():
     returns: none 
     '''
     welcome()
+    print("press 1 if delivery and 2 if pickup")
 
 main()
-
     
-print("Do you want to pick up or delivery?")
-
-print ("For delivery type 1")
-print ("For delivery 1 or enter 2 for pickup")
-
-delivery = input()
-
-if delivery == "1": 
-    print ("Delivery")
-    
-elif delivery == "2":
-    print ("Pickup")
-    
-else:
-     print("invalid response please use the options")
 
 while True:
     try:
-        delivery = int(input("please enter a valid option"))
-        if delivery >= 1 and delivery <= 2:
+        delivery = int(input("please enter choice"))
+        pickup = int(input("please enter choice"))
+        if delivery >= 1 and pickup >= 2:
          if delivery == 1:
-            print("Pickup")
+            print("Delivery")
             break
         elif delivery == 2:
-            print ("Delivery")
+            print ("Pickup")
             break
         else:
             print("wrong")
     except ValueError:
         print("this is not a valid number")
         print("please enter 1 or 2")
+    #pickup function
+    customer_details = {}
+
+
+print("Please enter pickup information ")
+
+valid = False
+while not valid:
+    customer_details['name'] = input("please enter your name ")
+    if customer_details['name'] != "":
+        print (customer_details['name'])
+        break 
+
+    else:
+        print("sorry this is left blank ")
+valid = False
+while not valid:
+    customer_details['phone'] = input("please enter phone number ")
+    if customer_details['phone'] != "":
+        print (customer_details['phone'])
+        break 
+
+    else:
+        print("sorry this is left blank ")
+
