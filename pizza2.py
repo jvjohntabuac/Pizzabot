@@ -3,6 +3,8 @@ from doctest import OutputChecker
 import random
 from random import randint 
 
+customer_details = {}
+
 # list of random names
 names = [ "John", "Michel", "Ana", "Hizhenberg", "Luke", "Jonathan", "Michel", "Alex", "Iris", "Mia" ]
 
@@ -33,23 +35,20 @@ def main():
 
 main()
     
-
 while True:
     try:
-        delivery = int(input("please enter choice"))
-        pickup = int(input("please enter choice"))
-        if delivery >= 1 and pickup >= 2:
-         if delivery == 1:
+        choice = int(input("Please enter your choice (1 for Delivery, 2 for Pickup): "))
+        if choice == 1:
             print("Delivery")
             break
-        elif delivery == 2:
-            print ("Pickup")
+        elif choice == 2:
+            print("Pickup")
             break
         else:
-            print("wrong")
+            print("Wrong input, please enter 1 or 2.")
     except ValueError:
-        print("this is not a valid number")
-        print("please enter 1 or 2")
+        print("This is not a valid number.")
+        print("Please enter 1 or 2.")
     #pickup function
     customer_details = {}
 
