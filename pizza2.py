@@ -4,7 +4,6 @@ import random
 from random import randint 
 
 customer_details = {}
-
 # list of random names
 names = [ "John", "Michel", "Ana", "Hizhenberg", "Luke", "Jonathan", "Michel", "Alex", "Iris", "Mia" ]
 
@@ -50,8 +49,6 @@ while True:
         print("This is not a valid number.")
         print("Please enter 1 or 2.")
     #pickup function
-    customer_details = {}
-
 
 print("Please enter pickup information ")
 
@@ -73,4 +70,42 @@ while not valid:
 
     else:
         print("sorry this is left blank ")
+        print(customer_details['name'])
+        #delivery functiobn
+    customer_details = {}
+
+def delivery():
+    print("Please enter pickup information")
+
+    # Ask for name
+    valid = False
+    while not valid:
+        customer_details['name'] = input("Please enter your name: ")
+        if customer_details['name'] != "":
+            print("Name:", customer_details['name'])
+            break
+        else:
+            print("Sorry, this field cannot be left blank.")
+
+    # Ask for phone number
+    valid = False
+    while not valid:
+        customer_details['phone'] = input("Please enter your phone number: ")
+        if customer_details['phone'] != "":
+            print("Phone number:", customer_details['phone'])
+            break
+        else:
+            print("Sorry, this field cannot be left blank.")
+
+    # Ask for address
+    print("Please provide additional delivery details:")
+    customer_details['address'] = input("Address: ")
+    customer_details['instructions'] = input("Delivery instructions: ")
+
+    # Print delivery details
+    print("Delivery details:")
+    for key, value in customer_details.items():
+        print(key.capitalize() + ":", value)
+
+
 
